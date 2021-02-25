@@ -89,12 +89,12 @@ export default function Login() {
                 <button className='sgn' onClick={() => toggle(2)}>SIGN UP</button><br /><br />
                 <div className={toggleState === 1 ? "active-content" : "content"}>
                     <span className='email-label'>Email Id</span><br />
-                    <input type="text" /><br />
+                    <input type="text" onChange={e => setEmail(e.target.value)}/><br />
                     <br />
                     <span className='password-label'>Password</span>
                     <img className='eye' onClick={show} />
                     <br />
-                    <input id='pass' type="password" /><br />
+                    <input id='pass' type="password" onChange={e => setPassword(e.target.value)}/><br />
                     <Button className='btn' onClick={handleLogin} >Login</Button>
                 </div>
                 <div className={toggleState === 2 ? "active-content" : "content"}>
